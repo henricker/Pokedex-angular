@@ -1,4 +1,7 @@
+import { PokemonService } from './../services/pokemon.service';
 import { Component, OnInit } from '@angular/core';
+import { ResponsePokemonApi } from '../models/ResponsePokemonApi.model';
+import { Pokemon } from '../models/Pokemon.model';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private pokemonService: PokemonService) { }
+  pokemons: Pokemon[] = [];
+
 
   ngOnInit(): void {
+    this.fetchApi();
   }
 
+  async fetchApi() {
+    this.pokemons = await this.pokemonService.getPokemons();
+  }
 }

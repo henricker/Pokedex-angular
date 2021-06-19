@@ -1,10 +1,9 @@
 import { Type } from "./Type.enum";
 
-export class Pokemon {
-
+export interface Pokemon {
   image: string;
-  number: number;
+  number: string;
   name: string;
   types: Type[];
-
 }
+

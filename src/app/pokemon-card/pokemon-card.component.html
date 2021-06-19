@@ -1,16 +1,17 @@
 <div class="pokemon-card">
   <div class="pokemon-card__image">
-    <img  src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="pokemon-image" width="205" height="205"/>
+    <img  src="{{pokemon.image}}" alt="pokemon-image" width="205" height="205"/>
   </div>
   <div class="pokemon-card__number">
-    Nº 001
+    {{pokemon.number}}
   </div>
   <div class="pokemon-card__name">
-    Bulbasaur
+    {{pokemon.name}}
   </div>
   <div class="pokemon-card__types">
-    <div class="pokemon-card__types__type pokemon-card__types__type--grass">Grass</div>
-    <div class="pokemon-card__types__type pokemon-card__types__type--poison">Poison</div>
+    <div class="pokemon-card__types__type pokemon-card__types__type--{{type}}"
+    *ngFor="let type of pokemon.types"
+    >{{type}}</div>
   </div>
 </div>
 
