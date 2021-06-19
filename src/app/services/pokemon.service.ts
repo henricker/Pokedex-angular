@@ -10,7 +10,7 @@ import { Type } from '../models/Type.enum';
 })
 export class PokemonService {
 
-  readonly url: string = "https://pokeapi.co/api/v2/pokemon/?limit=898";
+  readonly url: string = "https://pokeapi.co/api/v2/pokemon/?limit=151";
 
 
   constructor(

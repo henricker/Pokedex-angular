@@ -14,6 +14,10 @@ export class UtilPokemon {
     return s;
   }
 
+  public static convertStringToNumber(numberId: string) {
+    return Number(numberId);
+  }
+
   public static getPokemonImage(numberPokemon: string): string {
     return `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${numberPokemon}.png`
   }

@@ -2,6 +2,7 @@ import { PokemonService } from './../services/pokemon.service';
 import { Component, OnInit } from '@angular/core';
 import { ResponsePokemonApi } from '../models/ResponsePokemonApi.model';
 import { Pokemon } from '../models/Pokemon.model';
+import { UtilPokemon } from '../util/getPokemonNumber.util';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -19,6 +20,6 @@ export class PokemonListComponent implements OnInit {
   }
 
   async fetchApi() {
-    this.pokemons = await this.pokemonService.getPokemons();
+    this.pokemons =  (await this.pokemonService.getPokemons());
   }
 }
