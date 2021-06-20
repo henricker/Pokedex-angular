@@ -2,6 +2,8 @@
 
   font-family: "Signika", arial, sans-serif;
   margin: 1rem;
+  cursor: pointer;
+  transition: all .5s;
 
   &__image {
     background: var(--pokemon-card-color);
@@ -235,5 +237,9 @@
 
   }
 
+}
+
+.pokemon-card:hover {
+  transform: scale(1.3);
 }
 
